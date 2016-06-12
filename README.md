@@ -10,14 +10,36 @@ The goal of Elm Recipes is to provide example projects that demonstrate how to a
 
 #### Recipes
 
+**Basics**
 * [Hello World](hello-world)
+
+**Elm API**
 * [Parsing Json](json-parsing)
-* Formatting Numbers
 * Making Http Requests
 * Animation
 * Generating Random Values
-* Creating re-usable components with the Elm Architecture
 * Rendering SVG
+
+**Architecture**
+* Creating re-usable components with the Elm Architecture
+* Routing
+
+**Third-party-libraries**
+
 * Using Localstorage
 * Elm and Phoenix
+* Formatting Numbers
 * Elm and Firebase
+
+#### Set up notes
+
+The instructions for running the example code in these tutorials is always the same, unless otherwise stated:
+
+```
+$ git clone https://github.com/alexspurling/elm-recipes
+$ cd elm-recipes
+$ cd json-parsing
+$ elm package install
+$ elm make src/Main.elm
+$ open index.html
+```
