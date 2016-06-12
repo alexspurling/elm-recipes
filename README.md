@@ -24,6 +24,9 @@ The goal of Elm Recipes is to provide example projects that demonstrate how to a
 * Creating re-usable components with the Elm Architecture
 * Routing
 
+**Testing**
+* Unit testing
+
 **Third-party-libraries**
 
 * Using Localstorage
