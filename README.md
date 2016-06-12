@@ -14,7 +14,8 @@ The goal of Elm Recipes is to provide example projects that demonstrate how to a
 * [Hello World](hello-world)
 * Rendering HTML
 * Rendering CSS Styles
-
+* Formatting Dates
+* Formatting Numbers
 
 **Elm API**
 * [Parsing Json](json-parsing)
@@ -30,12 +31,12 @@ The goal of Elm Recipes is to provide example projects that demonstrate how to a
 **Testing**
 * Unit testing
 
-**Third-party-libraries**
-
-* Using Localstorage
-* Elm and Phoenix
-* Formatting Numbers
+**Data Storage**
+* [Using Localstorage](localstorage)
 * Elm and Firebase
+
+**Client and Server Applications**
+* Elm and Phoenix
 
 #### Set up notes
 
