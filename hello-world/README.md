@@ -2,6 +2,8 @@
 
 *Elm Version: 0.17.0*
 
+This tutorial covers:
+
 * How to create an Elm project from scratch
 * How to use the Elm compiler
 * Introduction to `elm-package.json`

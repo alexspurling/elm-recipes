@@ -11,7 +11,8 @@ The goal of Elm Recipes is to provide example projects that demonstrate how to a
 #### Recipes
 
 * [Hello World](hello-world)
-* Parsing Json
+* [Parsing Json](json-parsing)
+* Formatting Numbers
 * Making Http Requests
 * Animation
 * Generating Random Values
