@@ -49,7 +49,7 @@ type alias Address =
 
 #### Creating a Decoder
 
-Before we even touch the input json string above, we first need to create a `Decoder Voter` which is some type that understands how to convert Json data into a value of type `Voter`. You cannot create a `Decoder` from scratch, the only way to create a `Decoder` for a complex type is to combine already existing `Decoder`s of simpler types. Fortunately, the `Json.Decoder` module exposes functions to return `Decoder`s for all the Json primitive types such as `string`, `int` and `list`.
+Before we even touch the input Json string above, we first need to create a `Decoder Voter`. `Decoder Voter`s are things that will convert Json data into a `Voter` or fail. You cannot create one from scratch though -- you build it up out of simple `Decoder`s provided by the standard library.  Fortunately, the `Json.Decoder` module exposes a `Decoder` for all the Json primitive types such as `string`, `int` and quite a few ways to combine them.
 
 Let's look at our first `Decoder` function:
 
