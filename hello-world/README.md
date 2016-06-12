@@ -1,5 +1,7 @@
 ## Hello World
 
+*Elm Version: 0.17.0*
+
 * How to create an Elm project from scratch
 * How to use the Elm compiler
 * Introduction to `elm-package.json`
