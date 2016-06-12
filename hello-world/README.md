@@ -52,6 +52,8 @@ Note how Elm make has automatically created the file `elm-package.json` which de
 
 However, `elm make` warned us that it could not find the module 'Html' which is also required by our Hello World application. We need to tell Elm to download this dependency explicitly which is done using `elm package install`. Be sure to approve when asked to download packages:
 
+(*Note: As of Elm 0.17.1, both elm-lang/core and elm-lang/html will become default packages. This means the only step required in this tutorial will be to run `elm make`*)
+
 ```
 $ elm package install elm-lang/html
 To install elm-lang/html I would like to add the following
