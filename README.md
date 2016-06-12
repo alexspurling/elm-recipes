@@ -12,6 +12,9 @@ The goal of Elm Recipes is to provide example projects that demonstrate how to a
 
 **Basics**
 * [Hello World](hello-world)
+* Rendering HTML
+* Rendering CSS Styles
+
 
 **Elm API**
 * [Parsing Json](json-parsing)
@@ -46,3 +49,7 @@ $ elm package install
 $ elm make src/Main.elm
 $ open index.html
 ```
+
+#### Contribution
+
+Ultimately I would like this repository to be a single resource for answering those "How do I do x in Elm?" questions. If you have a topic you think other people should learn about, then please feel free to submit a pull request. Spelling/grammar/code fixes are equally welcome.
