@@ -65,7 +65,7 @@ voterDecoder =
     ("address" := addressDecoder)
     ("children" := (list string))
     ("registered" := bool)
-    partyDecoder
+    ("party" := partyDecoder)
 ```
 
 There's quite a lot going on here, so let's break it down. First of all, we know we want to decode a Json object with 7 fields (name, age, height etc). The Decoder module provides a function `object7` which takes a constructor followed by 7 arguments. To this we are passing a constructor function for our `Voter` type followed by 7 other `Decoder`s one representing each of the fields in our object.
@@ -92,7 +92,7 @@ import Json.Decode exposing (andThen, succeed, fail)
 
 partyDecoder : Decoder Party
 partyDecoder =
-  ("party" := string) `andThen` partyFromString
+  string `andThen` partyFromString
 
 partyFromString : String -> Decoder Party
 partyFromString party =

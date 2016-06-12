@@ -17,7 +17,7 @@ voterJson =
   },
   "children": ["Jane", "Jill"],
   "registered": true,
-  "party": "Green"
+  "party": "Republican"
 }
 """
 
@@ -52,7 +52,7 @@ voterDecoder =
         ("address" := addressDecoder)
         ("children" := (list string))
         ("registered" := bool)
-        partyDecoder
+        ("party" := partyDecoder)
 
 
 addressDecoder : Decoder Address
@@ -62,7 +62,7 @@ addressDecoder =
 
 partyDecoder : Decoder Party
 partyDecoder =
-    ("party" := string) `andThen` partyFromString
+    string `andThen` partyFromString
 
 
 partyFromString : String -> Decoder Party
