@@ -16,6 +16,7 @@ The goal of Elm Recipes is to provide example projects that demonstrate how to a
 * Rendering CSS Styles
 * Formatting Dates
 * Formatting Numbers
+* Get timestamp for events (clicks etc)
 
 **Elm API**
 * [Parsing Json](json-parsing)
