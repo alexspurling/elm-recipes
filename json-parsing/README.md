@@ -9,7 +9,13 @@ This tutorial covers:
 * How to chain Decoders
 * How to handle parsing errors
 
-Elm provides the [Json.Decode](http://package.elm-lang.org/packages/elm-lang/core/4.0.1/Json-Decode) module as part of the core library. Let's use this to decode a simple Json string into an Elm model.
+In other languages such as Javascript, parsing a Json document is pretty easy:
+
+```
+var mydoc = JSON.parse(jsonString);
+```
+
+However, if we did this in Elm, we would lose the benefits of type safety. In order to parse a Json file in a type safe way, Elm provides the [Json.Decode](http://package.elm-lang.org/packages/elm-lang/core/4.0.1/Json-Decode) module which is part of the core library. Let's use this to decode a simple Json string into an Elm model.
 
 Here's a simple Json document with fields of various different types:
 
