@@ -2,6 +2,8 @@
 
 *Elm Version: 0.17.0*
 
+[Try online here](https://alexspurling.github.io/elm-recipes/random/)
+
 This tutorial covers:
 
 * How to generate simple random value
@@ -161,6 +163,8 @@ for the application.
 
 You should now hopefully understand how to create random value generators for your own Elm types.
 Please have a look at the rest of the code in Main.elm to see the parts not covered here.
+
+[Try online here](https://alexspurling.github.io/elm-recipes/random/)
 
 ![](screen1.png)
 
