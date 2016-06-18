@@ -2,7 +2,7 @@
 
 *Elm Version: 0.17.0*
 
-[Try online here](https://alexspurling.github.io/json-parsing/random/)
+[Try it online here](https://alexspurling.github.io/json-parsing/random/)
 
 This tutorial covers:
 
@@ -159,7 +159,7 @@ main = viewParseResult (decodeString voterDecoder voterJson)
 
 The function `decodeString` takes a Decoder, some Json as a String and returns a Result. A lot can go wrong when parsing Json, so it makes sense that Elm is returning us a value that can represent either success or failure. Any errors related to either badly formatted Json, or an unexpected Json document will be reported as an `Err error`. Let's try it out:
 
-[Try online here](https://alexspurling.github.io/json-parsing/random/)
+[Try it online here](https://alexspurling.github.io/json-parsing/random/)
 
 Parsing the Json shown at the start of the tutorial:
 
