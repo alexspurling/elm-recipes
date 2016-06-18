@@ -71,13 +71,13 @@ randomValueGenerator =
 
 randomWord : Random.Generator String
 randomWord =
-  (Random.int 0 10) --Random word length
-    `Random.andThen`
-      (\length ->
-        Random.map2 toWord
-          uppercaseLetter --First character
-          (Random.list length lowercaseLetter) --Remaining characters
-      )
+    (Random.int 0 10)
+        `Random.andThen` --Random word length
+            (\length ->
+                Random.map2 toWord
+                    uppercaseLetter --First character
+                    (Random.list length lowercaseLetter) --Remaining characters
+            )
 
 
 uppercaseLetter : Random.Generator Char

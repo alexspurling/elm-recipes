@@ -24,8 +24,8 @@ via the Effects system. This works in the same way as HTTP, Time, and I/O. The
 [Random](http://package.elm-lang.org/packages/elm-lang/core/4.0.1/Random) library provides the
 functions you need to be able to tell Elm how to provide values of the types you need.
 
-Elm `Generator`s are like recipes that tell Elm how to create random values of any type you like. Just
-like [Json Decoders](../json-parsing), You build up `Generator`s from simple primitive instances that 
+Elm `Generators` are like recipes that tell Elm how to create random values of any type you like. Just
+like [Json Decoders](../json-parsing), You build up `Generators` from simple primitive instances that 
 are provided by the library.
 
 #### Creating a Generator
@@ -68,7 +68,7 @@ is a type constructor function (automatically created when the type was defined)
 Model : Bool -> Int -> String -> List String -> Model
 ```
 
-The remaining four arguments to `map4` are `Generator`s that produces values of the type expected by 
+The remaining four arguments to `map4` are `Generators` that produces values of the type expected by 
 the `Model` constructor function. `Random.bool` is a `Generator` that returns either True or False.
 `Random.int` is a `Generator` that returns a value between the min and max values specified.
 Finally we have `randomWord` and `Random.list 5 randomWord` which return `Generator String` and 
@@ -87,7 +87,7 @@ randomWord =
 ```
 
 I wanted to generate a word which had one upper case letter, followed by 0 to 10 lower case letters.
-Because I don't know how many random letters to generate in advance, I had to chain two `Generator`s
+Because I don't know how many random letters to generate in advance, I had to chain two `Generators`
 together using the `Random.andThen` function. This has the following signature:
 
 ```
@@ -124,7 +124,7 @@ toWord firstLetter remainingLetters =
 List to produce a new List).
 
 Don't worry if at this point you're still not sure what is going on here. It took me a while to wrap
-my head around the chaining logic of `Generator`s. Just remember that any type you might have can be
+my head around the chaining logic of `Generators`. Just remember that any type you might have can be
 broken down into its simple primitives and then chained together again with either `andThen` or `map`.
 
 #### Actually generating random values
@@ -148,20 +148,19 @@ update msg model =
       ( randomModel, Cmd.none )
 ```
 
-We've defined two types of `Msg`, the when the first is called, we call `Random.generate` with our
+We've defined two types of `Msg`, when the first is called, we call `Random.generate` with our
 `randomValueGenerator` function that we defined earlier, along with the Msg type that we want
-Elm to call our `update` function with the new random value. It's kind of like we're saying to 
-Elm: "Here's a recipe for how to produce my random model, please get back to me at this address
-when you have what I need". When the message `NewRandomValues` is passed to the `update` function
-it has our new `Model` as a payload. We simply tell Elm to use this as the new state for the 
-application.
+Elm to call our `update` function with along with the new random value. It's kind of like we're 
+saying to Elm: "Here's a recipe for how to produce my random model, please get back to me at this 
+address when you have what I need". When the message `NewRandomValues` is passed to the `update`
+function it has our new `Model` as a payload. We simply tell Elm to use this as the new state 
+for the application.
 
 
 #### Conclusion
 
 You should now hopefully understand how to create random value generators for your own Elm types.
-Please have a look at the rest of the code in [this example](src/Main.elm) to see the parts
-not covered here.
+Please have a look at the rest of the code in Main.elm to see the parts not covered here.
 
 ![](screen1.png)
 
