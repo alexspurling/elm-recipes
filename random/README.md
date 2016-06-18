@@ -1,4 +1,4 @@
-## Json Parsing
+## Generating Random Values
 
 *Elm Version: 0.17.0*
 
