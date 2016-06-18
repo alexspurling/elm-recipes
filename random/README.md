@@ -21,9 +21,8 @@ this:
 
 This means, in order to get a random value in your application, you need to ask Elm for it nicely
 via the Effects system. This works in the same way as HTTP, Time, and I/O. The 
-[Random](http://package.elm-lang.org/packages/elm-lang/core/4.0.1/Random) library provides functions
-for building random value `Generator`s and building a `Cmd` that will tell Elm to provide back to you
-a random value of your choosing.
+[Random](http://package.elm-lang.org/packages/elm-lang/core/4.0.1/Random) library provides the
+functions you need to be able to tell Elm how to provide values of the types you need.
 
 Elm `Generator`s are like recipes that tell Elm how to create random values of any type you like. Just
 like [Json Decoders](../json-parsing), You build up `Generator`s from simple primitive instances that 
