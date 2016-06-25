@@ -20,6 +20,7 @@ The goal of Elm Recipes is to provide example projects that demonstrate how to a
 
 **Elm API**
 * [Parsing Json](json-parsing)
+* [Encoding Json](json-encoding)
 * [Generating Random Values](random)
 * Making Http Requests
 * Animation
